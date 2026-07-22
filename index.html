@@ -43,95 +43,130 @@
 
     .sidebar-header {
       padding: 20px;
-      border-bottom: 1px solid #34495e;
+      border-bottom: 2px solid #34495e;
       text-align: center;
     }
 
+    .sidebar-header h2 {
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
     .user-display {
-      background: #34495e;
-      padding: 10px;
-      border-radius: 5px;
-      margin: 10px 0;
-      font-size: 12px;
+      background: linear-gradient(135deg, rgba(102,126,234,0.15) 0%, rgba(118,75,162,0.15) 100%);
+      padding: 12px;
+      border-radius: 6px;
+      margin: 12px 0;
+      font-size: 13px;
+      border-left: 4px solid #667eea;
     }
 
     .user-display strong {
       display: block;
       color: #667eea;
+      font-size: 14px;
+      margin-top: 5px;
     }
 
     .logout-btn {
       background: #e74c3c;
       color: white;
       border: none;
-      padding: 8px 15px;
+      padding: 10px 15px;
       border-radius: 5px;
       cursor: pointer;
       width: 100%;
       margin-top: 10px;
+      transition: all 0.3s;
     }
 
     .logout-btn:hover {
       background: #c0392b;
+      transform: translateY(-2px);
     }
 
     .create-group {
       padding: 15px;
-      border-bottom: 1px solid #34495e;
+      border-bottom: 2px solid #667eea;
+      background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
+      margin: 10px;
+      border-radius: 8px;
+    }
+
+    .create-group h3 {
+      margin-bottom: 12px;
+      font-size: 16px;
+      color: #2c3e50;
     }
 
     .create-group input {
       width: 100%;
-      padding: 8px;
-      border: none;
+      padding: 10px;
+      border: 2px solid #ddd;
       border-radius: 5px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+
+    .create-group input:focus {
+      outline: none;
+      border-color: #667eea;
     }
 
     .create-group button {
       width: 100%;
-      padding: 8px;
-      background: #667eea;
+      padding: 12px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-size: 15px;
+      transition: transform 0.2s;
     }
 
     .create-group button:hover {
-      background: #5568d3;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102,126,234,0.4);
     }
 
     .groups-section {
       flex: 1;
       overflow-y: auto;
-      padding: 15px;
+      padding: 15px 10px;
     }
 
     .groups-section h3 {
-      font-size: 14px;
-      margin-bottom: 10px;
+      font-size: 15px;
+      margin-bottom: 12px;
       color: #bdc3c7;
+      padding: 0 5px;
     }
 
     .group-item {
-      padding: 10px;
-      margin: 5px 0;
+      padding: 12px 10px;
+      margin: 8px 5px;
       background: #34495e;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: all 0.3s;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-left: 4px solid transparent;
     }
 
     .group-item:hover {
       background: #3d5470;
+      border-left-color: #667eea;
+      transform: translateX(5px);
     }
 
     .group-item.active {
-      background: #667eea;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-left-color: #fff;
+      box-shadow: 0 4px 12px rgba(102,126,234,0.3);
     }
 
     .group-delete {
@@ -160,29 +195,36 @@
     }
 
     .chat-header {
-      background: #f9f9f9;
+      background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
       padding: 20px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 2px solid #ddd;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
 
     .chat-header h2 {
       color: #2c3e50;
+      margin: 0;
+      flex: 1;
     }
 
     .invite-btn {
-      background: #27ae60;
+      background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
       color: white;
       border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
+      padding: 12px 24px;
+      border-radius: 6px;
       cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s;
+      box-shadow: 0 2px 8px rgba(39,174,96,0.2);
     }
 
     .invite-btn:hover {
-      background: #229954;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(39,174,96,0.4);
     }
 
     .messages-area {
@@ -387,15 +429,17 @@
     .modal-content {
       background: white;
       padding: 30px;
-      border-radius: 10px;
+      border-radius: 12px;
       width: 90%;
-      max-width: 400px;
+      max-width: 450px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      position: relative;
     }
 
     .modal-content h2 {
       margin-bottom: 20px;
       color: #2c3e50;
+      font-size: 20px;
     }
 
     .close-modal {
@@ -475,20 +519,35 @@
         </div>
 
         <div class="create-group">
-          <input type="text" id="groupInput" placeholder="Group name..." />
-          <button onclick="createGroup()">Create Group</button>
+          <h3>📝 Create New Group</h3>
+          <input type="text" id="groupInput" placeholder="Enter group name..." />
+          <button onclick="createGroup()" style="font-weight: bold;">+ Create Group</button>
         </div>
 
         <div class="groups-section">
-          <h3>Your Groups</h3>
+          <h3>💬 Your Groups</h3>
           <div id="groupsList"></div>
+          <p id="noGroups" style="color: #999; font-size: 12px; margin-top: 20px; text-align: center;">No groups yet.<br/>Create one above!</p>
         </div>
       </div>
 
       <!-- Main Chat Area -->
       <div class="main-area">
-        <div id="noChatSelected" class="no-group">
-          👈 Select a group to start chatting
+        <div id="noChatSelected" class="no-group" style="flex-direction: column; gap: 20px; padding: 40px; text-align: center;">
+          <div style="font-size: 48px;">👋</div>
+          <h2 style="color: #333;">Welcome to Chat!</h2>
+          <p style="color: #666; font-size: 16px; max-width: 400px;">
+            👈 <strong>Create a group</strong> on the left sidebar to get started, or ask someone to invite you to theirs!
+          </p>
+          <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; margin-top: 20px; color: #555; font-size: 14px;">
+            <strong>How to use:</strong>
+            <ol style="text-align: left; margin-top: 10px;">
+              <li>📝 Type a group name on the left</li>
+              <li>➕ Click "Create Group"</li>
+              <li>👥 Click "+ Invite" to add friends</li>
+              <li>💬 Start chatting!</li>
+            </ol>
+          </div>
         </div>
 
         <div id="chatWindow" class="hidden" style="display: flex; flex-direction: column;">
@@ -518,12 +577,15 @@
   <div id="inviteModal" class="modal hidden">
     <div class="modal-content">
       <span class="close-modal" onclick="closeInviteModal()">&times;</span>
-      <h2>Invite User</h2>
-      <p style="margin-bottom: 15px; color: #666; font-size: 14px;">
-        Share this code with others to join: <strong id="groupCode" style="background: #f0f0f0; padding: 5px 10px; border-radius: 5px;"></strong>
-      </p>
-      <input type="text" id="inviteUsername" placeholder="Enter username to invite..." onkeypress="if(event.key==='Enter') inviteUser()" />
-      <button onclick="inviteUser()" style="width: 100%; padding: 10px; background: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">Invite</button>
+      <h2>👥 Invite People to Group</h2>
+      <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin: 15px 0; font-size: 14px;">
+        <strong>Share group code:</strong><br/>
+        <div style="background: white; padding: 10px; border-radius: 5px; margin-top: 8px; font-family: monospace; word-break: break-all;" id="groupCode"></div>
+      </div>
+      <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;" />
+      <p style="font-size: 14px; color: #666; margin-bottom: 10px;"><strong>Or invite by username:</strong></p>
+      <input type="text" id="inviteUsername" placeholder="Enter their username..." onkeypress="if(event.key==='Enter') inviteUser()" />
+      <button onclick="inviteUser()" style="width: 100%; padding: 12px; background: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 12px; font-weight: bold;">✓ Invite User</button>
       <div id="inviteMessage" class="success hidden" style="margin-top: 10px;"></div>
     </div>
   </div>
@@ -710,12 +772,20 @@
       const userGroups = Object.values(allGroups).filter(g => g.members.includes(currentUser));
       const html = userGroups.map(g => `
         <div class="group-item ${currentGroup === g.id ? 'active' : ''}" onclick="selectGroup('${g.id}', '${escapeHtml(g.name)}')">
-          <span>${escapeHtml(g.name)}</span>
-          ${currentGroup === g.id && g.creator === currentUser ? `<button class="group-delete" onclick="deleteGroup('${g.id}'); event.stopPropagation();">✕</button>` : ''}
+          <span>💬 ${escapeHtml(g.name)}</span>
+          ${currentGroup === g.id && g.creator === currentUser ? `<button class="group-delete" onclick="deleteGroup('${g.id}'); event.stopPropagation();" title="Delete group">✕</button>` : ''}
         </div>
       `).join('');
 
-      document.getElementById('groupsList').innerHTML = html || '<p style="color: #999; font-size: 12px;">No groups yet. Create one!</p>';
+      const groupsList = document.getElementById('groupsList');
+      groupsList.innerHTML = html;
+      
+      const noGroups = document.getElementById('noGroups');
+      if (html) {
+        noGroups.style.display = 'none';
+      } else {
+        noGroups.style.display = 'block';
+      }
     }
 
     // Select Group
